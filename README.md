@@ -15,11 +15,11 @@ Here are the critical requirements necessary to develop a portfolio that satisfi
 
 ### Desctop
 
-![Desctop](images/heading-properties.png)
+![Desctop](assets/images/Portfolio.png)
 
 ### Mobile
 
-![Mobile](images/heading-properties.png)
+![Mobile](assets/images/Portfolio-mobile.png)
 
 
 You are required to submit the following for review:
