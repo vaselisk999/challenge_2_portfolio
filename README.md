@@ -26,4 +26,4 @@ You are required to submit the following for review:
 
 * The URL of the deployed application. [Application link](https://vaselisk999.github.io/challenge_2_portfolio/).
 
-* The URL of the GitHub repository. [Repository link](https://github.com/vaselisk999).
+* The URL of the GitHub repository. [Repository link](https://github.com/vaselisk999/challenge_2_portfolio).
