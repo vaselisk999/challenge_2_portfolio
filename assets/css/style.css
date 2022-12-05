@@ -14,6 +14,7 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  font-size: 1rem;
 }
   
 h1,
@@ -109,8 +110,10 @@ header {
 }
 
 .header-wrapper {
-    width: var(--width);
+    max-width: var(--width);
     margin: 0 auto;
+    display: flex;
+    position: relative;
 }
 
 nav ul {
@@ -123,7 +126,7 @@ nav ul li {
 }
   
 nav a {
-    color: #13293d;
+    color: #fff; 
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
@@ -132,7 +135,19 @@ nav a {
 }
   
 nav a:hover {
-    color: #fff;
+    color: #13293d;
+}
+
+.avatar {
+    position: absolute;
+    background-image: url(./../images/avatar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 169px;
+    height: 149px;
+    text-align: center;
+    line-height: 149px;
+    right: 20px;
 }
 
 /* main content */
@@ -152,6 +167,41 @@ nav a:hover {
     width: 100%;
 }
 
+.about_wrapper{
+    display: grid;
+    grid-template-rows:  300px 300px ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "m n"
+    "g v";
+    margin-top: 35px;
+}
+
+.about_item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.about_item_1 {
+    grid-area: "m";
+}
+
+.about_item_2 {
+    grid-area: "n";
+    background-image: url('../images/beautiful-rain-forest.jpg');
+}
+
+.about_item_3 {
+    grid-area: "g";
+    background-image: url('../images/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background.jpg');
+}
+
+.about_item_4 {
+    grid-area: "v";
+}
+
+
 .items_wrapper{
     display: grid;
     grid-template-rows:  300px 300px ;
@@ -169,10 +219,22 @@ nav a:hover {
     background-size: cover;
     cursor: pointer;
     align-items: flex-end;
+    background-size: cover;
+    opacity: 0.8;
+    
+}
+
+@keyframes background-image {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
 }
 
 .item:hover {
-    background-size: 200%;
+    animation: background-image 3s ease-in-out;
 }
 
 .item_placeholder{
@@ -238,6 +300,15 @@ nav a:hover {
     .item:hover {
         background-size: cover;
     }
+
+    .item_placeholder{
+        font-size: 0.9rem;
+        line-height: 0.9rem;
+    }
+
+    .about_item{
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -258,4 +329,49 @@ nav a:hover {
     .item:hover {
         background-size: cover;
     }
+
+    .item_placeholder{
+        font-size: 0.9rem;
+    }
+
+    nav a {
+        padding: 14px 14px;
+    }
+
+    .avatar {
+        display: none;
+    }
+
+    .about_wrapper{
+        display: grid;
+        grid-template-rows:  300px 300px  300px 300px; 
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "m" "n"
+        "g" "v";
+        margin-top: 35px;
+    }
+
+    .about_item_1 {
+        grid-area: "m";
+        order: 1;
+    }
+    
+    .about_item_2 {
+        grid-area: "n";
+        background-image: url('../images/beautiful-rain-forest.jpg');
+        order: 0;
+    }
+    
+    .about_item_3 {
+        grid-area: "g";
+        background-image: url('../images/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background.jpg');
+        order: 2;
+    }
+    
+    .about_item_4 {
+        grid-area: "v";
+        order: 3;
+    }
+    
 }

@@ -12,3 +12,18 @@ Here are the critical requirements necessary to develop a portfolio that satisfi
 * When the page is resized or viewed on various screens and devices then the layout is responsive and adapts to my viewport
 
 ## Mock-Up
+
+### Desctop
+
+![Desctop](images/heading-properties.png)
+
+### Mobile
+
+![Mobile](images/heading-properties.png)
+
+
+You are required to submit the following for review:
+
+* The URL of the deployed application. [Application link](https://vaselisk999.github.io/challenge_2_portfolio/).
+
+* The URL of the GitHub repository. [Repository link](https://github.com/vaselisk999).
