@@ -13,9 +13,9 @@ Here are the critical requirements necessary to develop a portfolio that satisfi
 
 ## Mock-Up
 
-### Desctop
+### Desktop
 
-![Desctop](assets/images/Portfolio.png)
+![Desktop](assets/images/Portfolio.png)
 
 ### Mobile
 

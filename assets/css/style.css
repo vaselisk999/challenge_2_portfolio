@@ -221,7 +221,6 @@ nav a:hover {
     align-items: flex-end;
     background-size: cover;
     opacity: 0.8;
-    
 }
 
 @keyframes background-image {
@@ -281,6 +280,8 @@ nav a:hover {
     }
 }
 
+/* media screen tablet  */
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .page-section {
         height: 100%;
@@ -310,6 +311,8 @@ nav a:hover {
         font-size: 0.9rem;
     }
 }
+
+/* media screen mobile  */
 
 @media screen and (max-width: 767px) {
     .page-section {
