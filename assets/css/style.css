@@ -5,75 +5,77 @@
 }
 
 /* reset styles */
-*{
-  box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
-  
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1rem;
 }
-  
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-}
-  
-p {
-  margin: 0;
+    margin: 0;
 }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+p {
+    margin: 0;
 }
-  
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
 }
-  
+
 input[type=submit]:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
 
 .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+    float: left;
+    width: 25%;
+    margin-top: 6px;
 }
-  
+
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }
-  
+
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* common */
@@ -92,7 +94,7 @@ p {
     padding: 40px 20px;
 }
 
-textarea{
+textarea {
     height: 200px;
 }
 
@@ -102,11 +104,11 @@ ul {
 
 /* header */
 header {
-   position: fixed;
-   z-index: 100;
-   width: 100%;
-   height: 80px;
-   background-color: var(--backgroundColor); 
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 80px;
+    background-color: var(--backgroundColor);
 }
 
 .header-wrapper {
@@ -124,16 +126,16 @@ nav ul {
 nav ul li {
     line-height: 80px;
 }
-  
+
 nav a {
-    color: #fff; 
+    color: #fff;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
 }
-  
+
 nav a:hover {
     color: #13293d;
 }
@@ -148,6 +150,18 @@ nav a:hover {
     text-align: center;
     line-height: 149px;
     right: 20px;
+
+    -webkit-mask-image: url(./../images/avatar.png);
+    mask-image: url(./../images/avatar.png);
+    -webkit-mask-size: 100%;
+    mask-size: 70%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+.avatar img{
+    height: auto;
+    width: 100%;
 }
 
 /* main content */
@@ -162,18 +176,18 @@ nav a:hover {
     position: relative;
 }
 
-.form-wrapper{
+.form-wrapper {
     padding: 25px;
     width: 100%;
 }
 
-.about_wrapper{
+.about_wrapper {
     display: grid;
-    grid-template-rows:  300px 300px ;
+    grid-template-rows: 300px 300px;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "m n"
-    "g v";
+    grid-template-areas:
+        "m n"
+        "g v";
     margin-top: 35px;
 }
 
@@ -201,14 +215,13 @@ nav a:hover {
     grid-area: "v";
 }
 
-
-.items_wrapper{
+.items_wrapper {
     display: grid;
-    grid-template-rows:  300px 300px ;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: 
-    "a b c"
-    "d e f";
+    grid-template-areas:
+        'a a a'
+        "d e f";
     margin-top: 20px;
 }
 
@@ -224,9 +237,12 @@ nav a:hover {
 }
 
 @keyframes background-image {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.8;
     }
@@ -236,8 +252,8 @@ nav a:hover {
     animation: background-image 3s ease-in-out;
 }
 
-.item_placeholder{
-    background-color: rgba(0,0,0,0.5);
+.item_placeholder {
+    background-color: rgba(0, 0, 0, 0.5);
     height: 70px;
     color: #ffffff;
     padding: 10px;
@@ -246,16 +262,6 @@ nav a:hover {
 .item_1 {
     grid-area: a;
     background-image: url('./../images/band-abstract-background-surface.jpg');
-}
-
-.item_2 {
-    grid-area: b;
-    background-image: url('./../images/business-people-walking-on-street.jpg');
-}
-
-.item_3 {
-    grid-area: c;
-    background-image: url('./../images/close-blue-fiber-optics-texture.jpg');
 }
 
 .item_4 {
@@ -274,9 +280,12 @@ nav a:hover {
 }
 
 @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
     }
 }
 
@@ -287,13 +296,13 @@ nav a:hover {
         height: 100%;
     }
 
-    .items_wrapper{
+    .items_wrapper {
         display: grid;
-        grid-template-rows:  300px 300px ;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "a b c"
-        "d e f";
+        grid-template-rows: 300px 300px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas:
+            "a a a"
+            "d e f";
         margin-top: 20px;
         margin: 20px 20px 0;
     }
@@ -302,12 +311,12 @@ nav a:hover {
         background-size: cover;
     }
 
-    .item_placeholder{
+    .item_placeholder {
         font-size: 0.9rem;
         line-height: 0.9rem;
     }
 
-    .about_item{
+    .about_item {
         font-size: 0.9rem;
     }
 }
@@ -319,12 +328,12 @@ nav a:hover {
         height: 100%;
     }
 
-    .items_wrapper{
+    .items_wrapper {
         display: grid;
-        grid-template-rows:  300px 300px 300px 300px 300px 300px ;
+        grid-template-rows: 300px 300px 300px 300px;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "a" "b" "c" "d" "e" "f";
+        grid-template-areas:
+            "a" "d" "e" "f";
         margin-top: 20px;
         padding: 0 20px;
     }
@@ -333,7 +342,7 @@ nav a:hover {
         background-size: cover;
     }
 
-    .item_placeholder{
+    .item_placeholder {
         font-size: 0.9rem;
     }
 
@@ -342,16 +351,20 @@ nav a:hover {
     }
 
     .avatar {
-        display: none;
+        width: 80px;
+        height: 70px;
+        top: 10px;
+        text-align: center;
+        line-height: 64px;
     }
 
-    .about_wrapper{
+    .about_wrapper {
         display: grid;
-        grid-template-rows:  300px 300px  300px 300px; 
+        grid-template-rows: 300px 300px 300px 300px;
         grid-template-columns: 1fr;
-        grid-template-areas: 
-        "m" "n"
-        "g" "v";
+        grid-template-areas:
+            "m" "n"
+            "g" "v";
         margin-top: 35px;
     }
 
@@ -359,22 +372,22 @@ nav a:hover {
         grid-area: "m";
         order: 1;
     }
-    
+
     .about_item_2 {
         grid-area: "n";
         background-image: url('../images/beautiful-rain-forest.jpg');
         order: 0;
     }
-    
+
     .about_item_3 {
         grid-area: "g";
         background-image: url('../images/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background.jpg');
         order: 2;
     }
-    
+
     .about_item_4 {
         grid-area: "v";
         order: 3;
     }
-    
+
 }
